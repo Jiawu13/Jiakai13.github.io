@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head>ç
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,700">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Práctica 16. Grid-layout</title>
     <style>
-        body{
+        body {
             font-family: "Mukta Malar", sans-serif;
         }
 
-        section{
+        section {
             padding: 4vh;
-            box-shadow: 0px 0.5em 2em rgba(0,0,0,0.3);
+            box-shadow: 0px 0.5em 2em rgba(0, 0, 0, 0.3);
             margin: 0 auto;
             margin-bottom: 3em;
+
         }
-        .card{
+
+        .card {
             margin: 1.5%;
             width: 30%;
             text-align: center;
             border: 1px solid black;
+
         }
 
-        .card img{
+        .card img {
             max-width: 100%;
+
         }
 
-        .card p{
+        .card p {
             margin: 0;
-            padding: 0.5em;
+            padding: .5em;
+
         }
 
-        section.grid-layout-one div.grid-parent{
+        /*Apartado 1*/
+        section.grid-layout-one div.grid-parent {
             display: grid;
             grid-template-columns: 3fr 1fr 1fr;
             gap: 5vh;
         }
 
-        section.grid-layout-one .card{
+        section.grid-layout-one .card {
             width: 100%;
         }
 
         /*Apartado 2*/
-        section.grid-layout-two{
+        section.grid-layout-two {
             display: grid;
             grid-template-columns: 1fr 4fr 1fr;
+
+
         }
 
+        section.grid-layout-two .title {
+            grid-column: 1/ span 3;
+        }
 
-        section.grid-layout-two .title{
+        section.grid-layout-two footer {
             grid-column: 1 / span 3;
 
         }
 
-        section.grid-layout-two footer{
-            grid-column: 1 / span 3;
-        }
-
-        .sidebar{
-            background-color: #407c84;
-            color: white;
-            padding: 1em;
-        }
-        
-
-        .main{
-            background-color: aliceblue;
-            color: #333;
+        .sidebar {
+            background-color: rgb(179, 144, 151);
+            color: beige;
             padding: 1em;
         }
 
-        .main .card{
-            float: left;
+        .main {
+            background-color: rgb(63, 196, 156);
+            color: rgb(196, 196, 41);
+            padding: 1em;
         }
 
-        footer{
-            background-color: #676a6f;
-            color: white;
-            padding: .5em;
+        .main div.card {
+            float: left
+        }
+
+        footer {
+
+            background-color: rgb(43, 52, 138);
+            color: rgb(67, 172, 241);
+            padding: 1em;
         }
     </style>
-
 </head>
 
 <body>
@@ -147,6 +153,7 @@
                 talking. </p>
         </footer>
     </section>
+
 </body>
 
 </html>
